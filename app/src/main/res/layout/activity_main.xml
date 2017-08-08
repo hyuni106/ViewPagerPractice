@@ -21,6 +21,7 @@
             android:src="@drawable/search_white_icon"/>
 
         <TextView
+            android:id="@+id/titleTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="뉴스피드"
@@ -39,6 +40,7 @@
     </FrameLayout>
 
     <LinearLayout
+        android:id="@+id/newsfeedBtnLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -156,6 +158,7 @@
         android:orientation="horizontal">
 
         <LinearLayout
+            android:id="@+id/newsfeedLayout"
             android:layout_width="0dp"
             android:orientation="vertical"
             android:gravity="center"
@@ -175,6 +178,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/friendRequestLayout"
             android:layout_width="0dp"
             android:orientation="vertical"
             android:gravity="center"
@@ -194,6 +198,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/messageBtnLayout"
             android:layout_width="0dp"
             android:orientation="vertical"
             android:gravity="center"
@@ -213,6 +218,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/notificationBtnLayout"
             android:layout_width="0dp"
             android:orientation="vertical"
             android:gravity="center"
@@ -232,6 +238,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/seeMoreBtnLayout"
             android:layout_width="0dp"
             android:orientation="vertical"
             android:gravity="center"

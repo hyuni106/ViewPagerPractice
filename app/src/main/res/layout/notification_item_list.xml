@@ -23,6 +23,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/notiTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="박성숙님이 수요일에 하사모 - 하동을사랑하는모임 그룹에 게시물을 올렸습니다." />
@@ -41,6 +42,7 @@
 
 
                 <TextView
+                    android:id="@+id/minuteAgoTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="3dp"
