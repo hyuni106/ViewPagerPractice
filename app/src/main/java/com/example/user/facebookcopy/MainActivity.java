@@ -1,5 +1,6 @@
 package com.example.user.facebookcopy;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private android.widget.LinearLayout seeMoreBtnLayout;
     private android.widget.TextView titleTxt;
     private LinearLayout newsfeedBtnLayout;
+    private LinearLayout statusLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,40 +45,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupEvents() {
-        newsfeedLayout.setOnClickListener(new View.OnClickListener() {
+        View.OnClickListener pageChangeListener = new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                mainViewPager.setCurrentItem(0);
+            public void onClick(View v) {
+                int pageNum = Integer.parseInt(v.getTag().toString());
+                mainViewPager.setCurrentItem(pageNum);
             }
-        });
+        };
 
-        friendRequestLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mainViewPager.setCurrentItem(1);
-            }
-        });
-
-        messageBtnLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mainViewPager.setCurrentItem(2);
-            }
-        });
-
-        notificationBtnLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mainViewPager.setCurrentItem(3);
-            }
-        });
-
-        seeMoreBtnLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mainViewPager.setCurrentItem(4);
-            }
-        });
+        newsfeedLayout.setOnClickListener(pageChangeListener);
+        friendRequestLayout.setOnClickListener(pageChangeListener);
+        messageBtnLayout.setOnClickListener(pageChangeListener);
+        notificationBtnLayout.setOnClickListener(pageChangeListener);
+        seeMoreBtnLayout.setOnClickListener(pageChangeListener);
 
         mainViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -110,9 +91,18 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        statusLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, EditStatusActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void bindViews() {
+        statusLayout = (LinearLayout)findViewById(R.id.statusLayout);
         this.seeMoreBtnLayout = (LinearLayout) findViewById(R.id.seeMoreBtnLayout);
         this.notificationBtnLayout = (LinearLayout) findViewById(R.id.notificationBtnLayout);
         this.messageBtnLayout = (LinearLayout) findViewById(R.id.messageBtnLayout);

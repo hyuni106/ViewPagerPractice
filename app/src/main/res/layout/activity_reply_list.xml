@@ -5,10 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     tools:context="com.example.user.facebookcopy.ReplyListActivity">
     
     <ListView
         android:id="@+id/replyList"
+        android:dividerHeight="0dp"
+        android:divider="@null"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"></ListView>
@@ -20,11 +24,14 @@
         android:padding="5dp">
         
         <EditText
+            android:id="@+id/replyEdt"
+            android:tag="0"
             android:layout_width="0dp"
             android:layout_height="wrap_content" 
             android:layout_weight="1"/>
         
         <Button
+            android:id="@+id/replySendBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="전송"/>

@@ -13,6 +13,8 @@ import java.util.List;
  */
 
 public class GlobalDatas {
+    public static int loginUserId = 10;
+    public static String loginUserName = "사용자";
     public static List<FriendRequestData> friendRequestDatas = new ArrayList<>();
     public static List<NotificationData> notificationDatas = new ArrayList<>();
     public static List<NewsFeedData> newsFeedDatas = new ArrayList<>();

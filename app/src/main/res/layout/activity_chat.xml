@@ -8,6 +8,9 @@
     tools:context="com.example.user.facebookcopy.ChatActivity">
 
     <ListView
+        android:id="@+id/chatList"
+        android:dividerHeight="0dp"
+        android:divider="@null"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"></ListView>
@@ -19,14 +22,16 @@
         android:padding="5dp">
 
         <EditText
+            android:id="@+id/sendMsgEdt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
 
         <Button
+            android:id="@+id/sendBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="전송"/>
+            android:text="전송" />
 
     </LinearLayout>
 
